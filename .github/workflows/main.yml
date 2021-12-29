@@ -26,4 +26,4 @@ jobs:
     - run: npx create-react-app .
     - run: rm -r src
     - run: cp ../temp/src .
-    - run: ls
+    - run: ls src
