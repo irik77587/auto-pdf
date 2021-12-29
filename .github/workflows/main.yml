@@ -23,6 +23,9 @@ jobs:
       uses: actions/setup-node@v2.5.1
     - run: mkdir ../temp
     - run: mv ./.[!.]* ../temp
+    - run: ls ..
+    - run: ls ../temp
+    - run: ls
     - run: npx create-react-app .
     - run: rm -r src
     - run: cp ../temp/src .
