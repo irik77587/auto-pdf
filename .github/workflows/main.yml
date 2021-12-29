@@ -30,3 +30,4 @@ jobs:
     - run: rm -r ../temp
     - run: ls src
     - run: ls
+    - run: git status --ignored
