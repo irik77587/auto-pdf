@@ -22,6 +22,7 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.5.1
     - run: mkdir ../temp
+    - run: ls -a
     - run: mv ./.babelrc ./.npmrc ./.github ./.gitignore ../temp
     - run: mv ./* ../temp
     - run: npx create-react-app .
@@ -29,7 +30,13 @@ jobs:
     - run: mv ../temp/src ../temp/.github .
     - run: rm -r ../temp
     - run: ls src
-    - run: ls
+    - run: ls -a
     - run: git status --ignored
+    - run: npm install @react-pdf/renderer --save
     - run: npm run build
     - run: mv build docs
+    - run: |
+        git config --global user.name 'irik77587'
+        git config --global user.email 'irik77587@users.noreply.github.com'
+        git commit -am "Automated report"
+        git push origin build
