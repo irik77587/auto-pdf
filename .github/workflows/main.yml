@@ -22,4 +22,4 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.5.1
     - run: npx create-react-app auto-pdf
-    - run: ls
+    - run: ls ~/
