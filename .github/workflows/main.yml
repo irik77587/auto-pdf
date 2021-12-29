@@ -21,4 +21,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.5.1
-    - run: npx --version
+    - run: npx create-react-app auto-pdf
+    - run: ls
