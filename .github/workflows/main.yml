@@ -22,7 +22,7 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.5.1
     - run: mkdir ../temp
-    - run: mv ./.babelrc ./.npmrc ./.github ../temp
+    - run: mv ./.babelrc ./.npmrc ./.github ./.gitignore ../temp
     - run: mv ./* ../temp
     - run: npx create-react-app .
     - run: rm -r src
@@ -31,3 +31,5 @@ jobs:
     - run: ls src
     - run: ls
     - run: git status --ignored
+    - run: npm run build
+    - run: mv build docs
