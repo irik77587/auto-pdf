@@ -26,6 +26,6 @@ jobs:
     - run: mv ./* ../temp
     - run: npx create-react-app .
     - run: rm -r src
-    - run: cp ../temp/src .
+    - run: mv ../temp/src .
     - run: rm -r ../temp
     - run: ls src
